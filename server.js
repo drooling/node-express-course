@@ -14,6 +14,14 @@ app.get("/users", function (req, res) {
     })
 })
 
+app.get("/users/:id", function (req, res) {
+    res.json({
+        success: true,
+        message: "fetched user",
+        user: req.params.id
+    })
+})
+
 app.listen(80, function () {
     console.log("Server running");
 })
