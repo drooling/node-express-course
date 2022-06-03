@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
+app.get("/", function (req, res) {
+    res.send("<center><h1>hey sexy</h1><center>")
+})
+
 mockData = [
     {name: "Mark"},
     {name: "Jill"}
@@ -47,5 +51,5 @@ app.post("/login", function (req, res) {
 })
 
 app.listen(80, function () {
-    console.log("Server running");
+    console.log("Server running ( http://localhost:80/ )");
 })
